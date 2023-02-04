@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Skill from '../components/Skill'
+import Project from '../components/Project'
+import Education from '../components/Education'
+import Internship from '../components/Internship'
+
+import SideMenu from '../components/SideMenu'
+import AboutMe from '../components/AboutMe'
+---
+
+<Layout title="Thasuohm Portfolio.">
+  <div class="flex">
+    <SideMenu client:load />
+    <div class="w-full duration-100">
+      <AboutMe />
+      <Education />
+      <Internship />
+      <Skill />
+      <Project />
+    </div>
+  </div>
+</Layout>
