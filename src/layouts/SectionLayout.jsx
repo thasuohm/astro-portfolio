@@ -11,7 +11,7 @@ const SectionLayout = ({
   return (
     <section
       id={id}
-      className={`flex ${bgColor ?? 'bg-slate-100'} px-2 pb-12 ${customStyle}`}
+      className={`flex ${bgColor ?? 'bg-slate-100'} px-4 pb-12 ${customStyle}`}
     >
       <div className="max-w-4xl w-full flex flex-col gap-8 mx-auto">
         <h2

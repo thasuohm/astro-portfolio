@@ -1,6 +1,7 @@
 type menu = {
   id: string
   label: string
+  highlight?: boolean
 }
 
 export const menuList: menu[] = [
@@ -23,9 +24,6 @@ export const menuList: menu[] = [
   {
     id: '#projects',
     label: '# My Projects',
-  },
-  {
-    id: '#project-1',
-    label: '# Project 1',
+    highlight: true,
   },
 ]

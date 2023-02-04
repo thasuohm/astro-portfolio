@@ -1,6 +1,7 @@
 import {useSpring, a} from '@react-spring/web'
 import React, {useState} from 'react'
 import {menuList} from '../data/menu'
+import {projects} from '../data/projects'
 
 const SideMenu = () => {
   const [isShowMenu, setIsShowMenu] = useState(false)
@@ -13,14 +14,27 @@ const SideMenu = () => {
   return (
     <>
       <a.div style={slideLeftMenu} className={`flex items-start fixed z-10`}>
-        <nav className="bg-slate-100 drop-shadow-md shadow-slate-600 h-screen duration-200 w-52 z-10 md:relative  flex flex-col gap-1 p-4">
+        <nav className="bg-slate-100 drop-shadow-md shadow-slate-600 h-screen duration-200 w-52 z-10 md:relative  flex flex-col  p-4">
           {menuList.map((item) => (
             <a
               key={item.id}
               href={item.id}
-              className="font-menlo border-solid border-b-2 py-1"
+              className={`font-menlo border-solid border-b-2 p-1 py-1.5 ${
+                item.highlight ? 'bg-red-500 text-white border-0' : ''
+              }`}
             >
               {item.label}
+            </a>
+          ))}
+          {projects.map((project, idx) => (
+            <a
+              key={project.id}
+              href={'#' + project.id}
+              className={`font-menlo border-solid border-b-2 p-1 py-1.5 ${
+                idx === projects.length - 1 ? 'bg-red-500 text-white border-0' : ''
+              }`}
+            >
+              # {project.id}
             </a>
           ))}
         </nav>
