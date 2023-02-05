@@ -7,9 +7,8 @@ const Project = () => {
     <SectionLayout
       id={'projects'}
       sectionName={'My Projects'}
-      bgColor="bg-slate-900"
       sectionNameColor="text-slate-200"
-      customStyle="pt-12"
+      customStyle="bg-slate-900 pt-12"
     >
       {projects.map((project, idx) => (
         <div
