@@ -74,7 +74,7 @@ export const projects: project[] = [
     link: 'https://github.com/int222-36-37-58/FrontEnd',
   },
   {
-    id: 'tcas-calculator65',
+    id: 'tcas-cal-65',
     title: 'Dek-D TCAS calculator 65',
     description:
       'Dek-D TCAS calculator 65, the application to help people to calculate the percentage to get into a university and show the requirement score and score ratio for each university.  This project still available in DekD TCAS Application on Mobile',
@@ -94,7 +94,7 @@ export const projects: project[] = [
     tools: 'HTML, CSS, JavaScript, PHP',
   },
   {
-    id: 'distribution-topic',
+    id: 'exam-topic',
     title: 'TGAT TPAT A-Level Exam topic distribution Program',
     description:
       'TGAT TPAT A-Level Exam topic distribution Program, the application to give the user about the topic for each subject and tell how many questions to get the goal score, user can print into the paper',
@@ -114,7 +114,7 @@ export const projects: project[] = [
     tools: 'HTML, CSS, Flask',
   },
   {
-    id: 'sharemybook',
+    id: 'share-my-book',
     title: 'Share my Book',
     tag: 'Senior Project',
     description:

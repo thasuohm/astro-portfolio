@@ -7,7 +7,7 @@ type menu = {
 export const menuList: menu[] = [
   {
     id: '#aboutme',
-    label: '# About me',
+    label: '# About Me',
   },
   {
     id: '#education',

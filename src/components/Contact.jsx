@@ -42,7 +42,7 @@ const Contact = () => {
             <a
               href="mailto:thanapat.suwanaaard@gmail.com"
               target="_blank"
-              className="underline hover:no-underline"
+              className="font-semibold underline hover:no-underline"
             >
               thanapat.suwanaaard@gmail.com
             </a>
@@ -58,7 +58,7 @@ const Contact = () => {
 
           <div className="flex flex-col gap-1 sm:items-center">
             <span className="text-xl font-bold sm:mt-2">Tel</span>
-            <span>061-896-9299</span>
+            <span className="font-semibold">061-896-9299</span>
           </div>
         </div>
       </div>
