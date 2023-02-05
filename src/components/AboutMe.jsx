@@ -34,7 +34,7 @@ const AboutMe = () => {
           <h1>Thanapat Suwannaard</h1>
 
           <p className="text-lg font-semibold">
-            I'am in love with Coding and find the way to make my code even
+            I am in love with Coding and find the way to make my code even
             Better!
           </p>
           <div className="flex gap-6 justify-center sm:justify-start items-center mt-4">

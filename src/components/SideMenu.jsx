@@ -14,7 +14,7 @@ const SideMenu = () => {
   return (
     <>
       <a.div style={slideLeftMenu} className={`flex items-start fixed z-10`}>
-        <nav className="bg-slate-100 drop-shadow-md shadow-slate-600 h-screen duration-200 w-52 z-10 md:relative  flex flex-col  p-4">
+        <nav className="bg-slate-100 drop-shadow-md shadow-slate-600 h-screen duration-200 w-52 z-10 md:relative  flex flex-col  p-4 overflow-y-auto">
           {menuList.map((item) => (
             <a
               key={item.id}
