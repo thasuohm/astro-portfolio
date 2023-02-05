@@ -42,7 +42,7 @@ const Contact = () => {
             <a
               href="mailto:thanapat.suwanaaard@gmail.com"
               target="_blank"
-              className="font-semibold underline hover:no-underline"
+              className="font-semibold underline hover:no-underline break-all"
             >
               thanapat.suwanaaard@gmail.com
             </a>

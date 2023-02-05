@@ -20,7 +20,7 @@ const Project = () => {
           <header className="text-xl font-semibold flex items-baseline gap-2">
             {idx + 1}. {project.title}{' '}
             {project.tag && (
-              <span className="text-base font-normal py-1 px-2 bg-red-600 text-white rounded-2xl w-max font-menlo">
+              <span className="text-base font-normal py-1 px-2 bg-red-600 text-white rounded-2xl w-max font-menlo text-center">
                 {project.tag}
               </span>
             )}
