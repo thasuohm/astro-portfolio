@@ -61,16 +61,6 @@ const AboutMe = () => {
                 title="thanapat.suwanaaard@gmail.com"
               />
             </a>
-
-            <div className="flex gap-2 sm:gap-3 items-center">
-              <img
-                src={tel}
-                alt="thanapat.suwanaaard@gmail.com"
-                title="thanapat.suwanaaard@gmail.com"
-                className="w-10 rounded-full"
-              />
-              <span className="text-lg sm:text-xl font-bold font-menlo">061-896-9299</span>
-            </div>
           </div>
         </a.div>
         <a.div

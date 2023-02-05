@@ -31,12 +31,19 @@ const SideMenu = () => {
               key={project.id}
               href={'#' + project.id}
               className={`font-menlo border-solid border-b-2 p-1 py-1.5 ${
-                idx === projects.length - 1 ? 'bg-red-500 text-white border-0' : ''
+                idx === projects.length - 1
+                  ? 'bg-red-500 text-white border-0'
+                  : ''
               }`}
             >
               # {project.id}
             </a>
           ))}
+
+          <a
+            href="#contact"
+            className={`font-menlo border-solid border-b-2 p-1 py-1.5 bg-slate-800 text-white`}
+          ># Contact Me</a>
         </nav>
       </a.div>
 
