@@ -36,7 +36,7 @@ const AboutMe = () => {
             I'am in love with Coding and find the way to make my code even
             Better!
           </p>
-          <div className="flex gap-6 items-baseline mt-4">
+          <div className="flex gap-6 justify-center sm:justify-start items-baseline mt-4">
             <a
               href="https://github.com/thasuohm"
               target="_blank"

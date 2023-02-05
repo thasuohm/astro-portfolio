@@ -17,10 +17,25 @@ const Project = () => {
           className="text-slate-200 flex flex-col gap-2"
           id={project.id}
         >
-          <header className="text-xl font-semibold">
-            {idx + 1}. {project.title}
+          <header className="text-xl font-semibold flex items-baseline gap-2">
+            {idx + 1}. {project.title}{' '}
+            {project.tag && (
+              <span className="text-base font-normal py-1 px-2 bg-red-600 text-white rounded-2xl w-max font-menlo">
+                {project.tag}
+              </span>
+            )}
           </header>
           <p className="text-slate-300 tracking-wide">{project.description}</p>
+
+          {project.learn && (
+            <div className="">
+              <span className="font-semibold text-yellow-500">
+                What I Learn :
+              </span>{' '}
+              {project.learn}
+            </div>
+          )}
+
           <p>
             <span className="font-semibold text-orange-500">Build with : </span>{' '}
             {project.tools}
