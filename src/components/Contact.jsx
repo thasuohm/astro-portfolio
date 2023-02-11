@@ -23,7 +23,7 @@ const Contact = () => {
             <span className="text-xl font-bold sm:mt-2">GitHub</span>
             <a
               href="https://github.com/thasuohm"
-              className="font-semibold underline hover:no-underline"
+              className="font-semibold"
               target="_blank"
             >
               thasuohm
@@ -42,7 +42,7 @@ const Contact = () => {
             <a
               href="mailto:thanapat.suwanaaard@gmail.com"
               target="_blank"
-              className="font-semibold underline hover:no-underline break-all"
+              className="font-semibold break-all"
             >
               thanapat.suwanaaard@gmail.com
             </a>
