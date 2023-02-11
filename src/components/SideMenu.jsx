@@ -4,7 +4,7 @@ import { menuList } from '../data/menu'
 import { projects } from '../data/projects'
 
 const SideMenu = () => {
-  const [isShowMenu, setIsShowMenu] = useState(true)
+  const [isShowMenu, setIsShowMenu] = useState(false)
 
   const slideLeftMenu = useSpring({
     x: isShowMenu ? 0 : -600,
