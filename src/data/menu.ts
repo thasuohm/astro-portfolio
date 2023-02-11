@@ -24,5 +24,6 @@ export const menuList: menu[] = [
   {
     id: '#projects',
     label: '# My Projects',
+    highlight: true,
   },
 ]
