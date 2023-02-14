@@ -27,7 +27,7 @@ import retro2 from '/images/projects/retro-creator/createform.mp4'
 import retro3 from '/images/projects/retro-creator/sendboard.mp4'
 import retro4 from '/images/projects/retro-creator/commentitem.mp4'
 
-type project = {
+export type project = {
   id: string
   title: string
   description: string

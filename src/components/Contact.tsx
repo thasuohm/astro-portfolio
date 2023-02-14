@@ -9,8 +9,7 @@ const Contact = () => {
     <SectionLayout
       id={'contact'}
       sectionName={'Contact Me'}
-      customStyle="bg-black text-white pt-12"
-    >
+      customStyle="bg-black text-white pt-12">
       <div className="flex flex-row flex-wrap gap-12 sm:justify-center items-start sm:items-center mt-4 text-slate-300">
         <div className="flex gap-6 sm:gap-1 flex-row sm:flex-col items-center">
           <img
@@ -25,7 +24,7 @@ const Contact = () => {
               href="https://github.com/thasuohm"
               className="font-semibold"
               target="_blank"
-            >
+              rel="noopener">
               thasuohm
             </a>
           </div>
@@ -42,8 +41,7 @@ const Contact = () => {
             <a
               href="mailto:thanapat.suwanaaard@gmail.com"
               target="_blank"
-              className="font-semibold break-all"
-            >
+              className="font-semibold break-all">
               thanapat.suwanaaard@gmail.com
             </a>
           </div>

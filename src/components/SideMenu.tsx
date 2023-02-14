@@ -43,6 +43,7 @@ const SideMenu = () => {
       </a.div>
 
       <button
+        title="side-menu"
         onClick={() => {
           setIsShowMenu((prev) => !prev)
         }}
