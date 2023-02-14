@@ -15,7 +15,9 @@ const SideMenu = () => {
 
   const outsideMenuClicked = () => {
     if (isShowMenu) {
-      setIsShowMenu(false)
+      setTimeout(() => {
+        setIsShowMenu(false)
+      }, 100)
     }
   }
 
@@ -56,12 +58,11 @@ const SideMenu = () => {
       </a.div>
 
       <button
-        ref={menuRef}
         title="side-menu"
         onClick={() => {
-          setTimeout(() => {
-            setIsShowMenu((prev) => !prev)
-          }, 50)
+          if (!isShowMenu) {
+            return setIsShowMenu(true)
+          }
         }}
         className={`fixed ${
           isShowMenu ? 'left-64' : 'left-2'
