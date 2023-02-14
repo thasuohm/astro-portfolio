@@ -13,19 +13,18 @@ import tcascal3 from '/images/projects/tcascalculator65/cal-4.png'
 
 import examonline1 from '/images/projects/dekdexamonline/instruction.png'
 import examonline2 from '/images/projects/dekdexamonline/exam.png'
-import examonline3 from '/images/projects/dekdexamonline/exam-mobile.png'
 
-import examtopic1 from '/images/projects/examtopic/distibute-1.mp4'
+import examtopic1 from '/images/projects/examtopic/distibute-1.webm'
 
 import opdc from '/images/projects/opdc/homepage.png'
 
-import sharemybook1 from '/images/projects/sharemybook/search.mp4'
-import sharemybook2 from '/images/projects/sharemybook/profile.mp4'
+import sharemybook1 from '/images/projects/sharemybook/search.webm'
+import sharemybook2 from '/images/projects/sharemybook/profile.webm'
 
-import retro1 from '/images/projects/retro-creator/switchmode.mp4'
-import retro2 from '/images/projects/retro-creator/createform.mp4'
-import retro3 from '/images/projects/retro-creator/sendboard.mp4'
-import retro4 from '/images/projects/retro-creator/commentitem.mp4'
+import retro1 from '/images/projects/retro-creator/switchmode.webm'
+import retro2 from '/images/projects/retro-creator/createform.webm'
+import retro3 from '/images/projects/retro-creator/sendboard.webm'
+import retro4 from '/images/projects/retro-creator/commentitem.webm'
 
 export type project = {
   id: string
@@ -90,7 +89,7 @@ export const projects: project[] = [
       'Dek-D Exam Online, the application for students to buy a course to do an exam for preparing for the university.',
     learn:
       'This project make me learn about make timer most reliable to server, aware user go out of page and there answer lost, offline state, play audio, many choice formats, many UI views for each device, and the version and OS that the user use',
-    images: [examonline1, examonline2, examonline3],
+    images: [examonline1, examonline2],
     tools: 'HTML, CSS, JavaScript, PHP',
   },
   {

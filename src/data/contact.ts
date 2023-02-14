@@ -19,7 +19,7 @@ export const contacts: contact[] = [
   {
     img: gmail,
     contactType: 'Gmail',
-    link: 'thanapat.suwanaaard@gmail.com',
+    link: 'mailto:thanapat.suwanaaard@gmail.com',
     label: 'thanapat.suwanaaard@gmail.com',
   },
   {
