@@ -56,11 +56,12 @@ const SideMenu = () => {
       </a.div>
 
       <button
+        ref={menuRef}
         title="side-menu"
         onClick={() => {
-          if (!isShowMenu) {
+          setTimeout(() => {
             setIsShowMenu((prev) => !prev)
-          }
+          }, 50)
         }}
         className={`fixed ${
           isShowMenu ? 'left-64' : 'left-2'

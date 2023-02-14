@@ -6,6 +6,11 @@ import {
   databaseTools,
   otherTools,
   testingTools,
+  dummyWebTools,
+  dummyTestTools,
+  dummyStyleTools,
+  dummyDBTools,
+  dummyOtherTools,
 } from '../data/skills'
 import { a, useTransition } from '@react-spring/web'
 import useOnScreen from '../hooks/useOnScreen'
@@ -14,39 +19,48 @@ const Skill = () => {
   const skillRef: any = useRef<HTMLElement>()
   const skillOnScreen: boolean = useOnScreen(skillRef)
 
-  const webDevTransition = useTransition(skillOnScreen ? webDevTools : [], {
-    from: { opacity: 0, scale: 0 },
-    enter: { opacity: 1, scale: 1 },
-    trail: 100,
-  })
+  const webDevTransition = useTransition(
+    skillOnScreen ? webDevTools : dummyWebTools,
+    {
+      from: { opacity: 0.1, scale: 0.1 },
+      enter: { opacity: 1, scale: 1 },
+      trail: 100,
+    }
+  )
 
   const testingToolsTransition = useTransition(
-    skillOnScreen ? testingTools : [],
+    skillOnScreen ? testingTools : dummyTestTools,
     {
-      from: { opacity: 0, scale: 0 },
+      from: { opacity: 0.1, scale: 0.1 },
       enter: { opacity: 1, scale: 1 },
       trail: 100,
     }
   )
-  const styleToolsTransition = useTransition(skillOnScreen ? styleTools : [], {
-    from: { opacity: 0, scale: 0 },
-    enter: { opacity: 1, scale: 1 },
-    trail: 100,
-  })
+  const styleToolsTransition = useTransition(
+    skillOnScreen ? styleTools : dummyStyleTools,
+    {
+      from: { opacity: 0.1, scale: 0.1 },
+      enter: { opacity: 1, scale: 1 },
+      trail: 100,
+    }
+  )
   const databaseToolsTransition = useTransition(
-    skillOnScreen ? databaseTools : [],
+    skillOnScreen ? databaseTools : dummyDBTools,
     {
-      from: { opacity: 0, scale: 0 },
+      from: { opacity: 0.1, scale: 0.1 },
       enter: { opacity: 1, scale: 1 },
       trail: 100,
     }
   )
-  const otherToolsTransition = useTransition(skillOnScreen ? otherTools : [], {
-    from: { opacity: 0, scale: 0 },
-    enter: { opacity: 1, scale: 1 },
+  const otherToolsTransition = useTransition(
+    skillOnScreen ? otherTools : dummyOtherTools,
+    {
+      from: { opacity: 0.1, scale: 0.1 },
+      enter: { opacity: 1, scale: 1 },
 
-    trail: 100,
-  })
+      trail: 100,
+    }
+  )
 
   return (
     <SectionLayout id={'stack'} sectionName={'My Stack'}>
