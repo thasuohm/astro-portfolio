@@ -58,7 +58,9 @@ const SideMenu = () => {
       <button
         title="side-menu"
         onClick={() => {
-          setIsShowMenu((prev) => !prev)
+          if (!isShowMenu) {
+            setIsShowMenu((prev) => !prev)
+          }
         }}
         className={`fixed ${
           isShowMenu ? 'left-64' : 'left-2'

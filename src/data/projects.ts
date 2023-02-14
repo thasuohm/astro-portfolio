@@ -1,30 +1,30 @@
-import webcopy1 from '/images/projects/dropboxcopy/top.png'
-import webcopy2 from '/images/projects/dropboxcopy/mid.png'
-import webcopy3 from '/images/projects/dropboxcopy/bottom.png'
+import webcopy1 from '/images/projects/dropboxcopy/top-page.png'
+import webcopy2 from '/images/projects/dropboxcopy/mid-page.png'
+import webcopy3 from '/images/projects/dropboxcopy/bottom-page.png'
 
-import calculatorApp1 from '/images/projects/calculator/calculatorApp.mp4'
+import calculatorApp1 from '/images/projects/calculator/calculator.mp4'
 
-import phoenixnext1 from '/images/projects/phoenixnext/homepage.mp4'
-import phoenixnext2 from '/images/projects/phoenixnext/cart.mp4'
+import phoenixnext1 from '/images/projects/phoenixnext/welcomepage.mp4'
+import phoenixnext2 from '/images/projects/phoenixnext/addcart.mp4'
 
-import tcascal1 from '/images/projects/tcascalculator65/cal-1.png'
-import tcascal2 from '/images/projects/tcascalculator65/cal-3.png'
-import tcascal3 from '/images/projects/tcascalculator65/cal-4.png'
+import tcascal1 from '/images/projects/tcascalculator65/pro-1.png'
+import tcascal2 from '/images/projects/tcascalculator65/pro-3.png'
+import tcascal3 from '/images/projects/tcascalculator65/pro-4.png'
 
-import examonline1 from '/images/projects/dekdexamonline/instruction.png'
-import examonline2 from '/images/projects/dekdexamonline/exam.png'
+import examonline1 from '/images/projects/dekdexamonline/instruction-page.png'
+import examonline2 from '/images/projects/dekdexamonline/exam-page.png'
 
-import examtopic1 from '/images/projects/examtopic/distibute-1.webm'
+import examtopic1 from '/images/projects/examtopic/distibute.webm'
 
-import opdc from '/images/projects/opdc/homepage.png'
+import opdc from '/images/projects/opdc/opdc-homepage.png'
 
-import sharemybook1 from '/images/projects/sharemybook/search.webm'
-import sharemybook2 from '/images/projects/sharemybook/profile.webm'
+import sharemybook1 from '/images/projects/sharemybook/search-book.webm'
+import sharemybook2 from '/images/projects/sharemybook/profile-page.webm'
 
-import retro1 from '/images/projects/retro-creator/switchmode.webm'
-import retro2 from '/images/projects/retro-creator/createform.webm'
-import retro3 from '/images/projects/retro-creator/sendboard.webm'
-import retro4 from '/images/projects/retro-creator/commentitem.webm'
+import retro1 from '/images/projects/retro-creator/switch-theme.webm'
+import retro2 from '/images/projects/retro-creator/create-board.webm'
+import retro3 from '/images/projects/retro-creator/write-board.webm'
+import retro4 from '/images/projects/retro-creator/comment-item.webm'
 
 export type project = {
   id: string

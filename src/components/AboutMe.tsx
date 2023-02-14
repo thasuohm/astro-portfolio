@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import gmail from '/images/gmail.png'
 import github from '/images/github.png'
-import profileImage from '/images/profile.jpg'
+import profileImage from '/images/profile-img.jpg'
 import { a, useSpring } from '@react-spring/web'
 import useOnScreen from '../hooks/useOnScreen'
 

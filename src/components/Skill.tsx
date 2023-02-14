@@ -50,7 +50,7 @@ const Skill = () => {
 
   return (
     <SectionLayout id={'stack'} sectionName={'My Stack'}>
-      <div ref={skillRef}>
+      <div ref={skillRef} className="flex flex-wrap">
         <div className="flex flex-wrap gap-8">
           <div id="dev-list" className="flex flex-col gap-2">
             <header className="font-semibold text-xl pb-4">Development</header>
@@ -60,7 +60,7 @@ const Skill = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 grayscale hover:grayscale-0 duration-100 cursor-pointer object-contain"
+                    className="w-20 h-20  duration-100 cursor-pointer object-contain"
                     title={item.name}
                   />
                 </a.div>
@@ -75,7 +75,7 @@ const Skill = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 grayscale hover:grayscale-0 duration-100 cursor-pointer object-contain"
+                    className="w-20 h-20  duration-100 cursor-pointer object-contain"
                     title={item.name}
                   />
                 </a.div>
@@ -84,7 +84,7 @@ const Skill = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-8 mt-8">
           <div id="style-list" className="flex flex-col gap-2">
             <header className="font-semibold text-xl pb-4">Style</header>
             <div className="flex flex-wrap gap-8">
@@ -93,7 +93,7 @@ const Skill = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 grayscale hover:grayscale-0 duration-100 cursor-pointer object-contain"
+                    className="w-20 h-20  duration-100 cursor-pointer object-contain"
                     title={item.name}
                   />
                 </a.div>
@@ -108,7 +108,7 @@ const Skill = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 grayscale hover:grayscale-0 duration-100 cursor-pointer object-contain"
+                    className="w-20 h-20 duration-100 cursor-pointer object-contain"
                     title={item.name}
                   />
                 </a.div>
@@ -124,7 +124,7 @@ const Skill = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-20 h-20 grayscale hover:grayscale-0 duration-100 cursor-pointer object-contain"
+                    className="w-20 h-20  duration-100 cursor-pointer object-contain"
                     title={item.name}
                   />
                 </a.div>
