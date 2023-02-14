@@ -21,8 +21,10 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
     <div className={`text-slate-200 flex flex-col gap-2`} id={project.id}>
       <header
         ref={titleRef}
-        className={`text-2xl font-semibold flex items-baseline gap-2 duration-700 ${
-          titleOnScreen ? 'opacity-1 translate-x-0' : 'opacity-0 translate-x-24'
+        className={`text-xl sm:text-2xl font-semibold flex items-baseline gap-2 duration-700 ${
+          titleOnScreen
+            ? 'opacity-1 translate-x-0'
+            : 'opacity-0 -translate-x-12'
         }`}>
         {idx + 1}. {project.title}{' '}
         {project.tag && (
@@ -33,10 +35,10 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
       </header>
       <p
         ref={describeRef}
-        className={`text-slate-300 tracking-wide duration-300 ${
+        className={`text-slate-300 tracking-wide duration-300  ${
           describeOnScreen
-            ? 'opacity-1 translate-y-0 '
-            : 'opacity-0 translate-y-12'
+            ? 'opacity-1 translate-y-0'
+            : 'opacity-0 translate-y-12 blur-sm'
         }`}>
         {project.description}
       </p>
@@ -47,7 +49,7 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
           className={`duration-500 ${
             learnOnScreen
               ? 'opacity-1 translate-y-0 '
-              : 'opacity-0 translate-y-12'
+              : 'opacity-0 translate-y-12 blur-sm'
           }`}>
           <span className={`font-semibold text-yellow-500`}>
             What I Learn :
@@ -61,7 +63,7 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
         className={`duration-700 ${
           buildOnScreen
             ? 'opacity-1 translate-y-0 '
-            : 'opacity-0 translate-y-12'
+            : 'opacity-0 translate-y-12 blur-sm'
         }`}>
         <span className="font-semibold text-orange-500">Build with : </span>{' '}
         {project.tools}
@@ -72,8 +74,8 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
           ref={linkRef}
           className={`flex items-center gap-2 duration-1000 ${
             linkOnScreen
-              ? 'opacity-1 translate-y-0 '
-              : 'opacity-0 translate-y-12'
+              ? 'opacity-1 translate-y-0'
+              : 'opacity-0 translate-y-12 blur-sm'
           }`}>
           <span className="font-semibold text-red-500">Source Code :</span>{' '}
           <a
@@ -88,8 +90,8 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
 
       <div
         ref={mediaRef}
-        className={`flex flex-col gap-4 mt-4  duration-1000 ${
-          mediaOnScreen ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`flex flex-col gap-4 mt-4  duration-500 ${
+          mediaOnScreen ? 'opacity-1 scale-100' : 'opacity-0 scale-95'
         }`}>
         {project.images &&
           project.images.map((image, idx) => (

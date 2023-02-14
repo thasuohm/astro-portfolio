@@ -1,26 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import SectionLayout from '../layouts/SectionLayout'
 import kmutt from '/images/kmutt.png'
-import useSlide from '../hooks/useSlide'
-import useFade from '../hooks/useFade'
-import {a} from '@react-spring/web'
+import { a, useSpring } from '@react-spring/web'
+import useOnScreen from '../hooks/useOnScreen'
 
 const Education = () => {
-  const slideUp = useSlide({fromY: 50, toY: 0})
-  const fade = useFade({})
+  const contentRef: any = useRef<HTMLElement>()
+  const contentOnScreen: boolean = useOnScreen(contentRef)
+  const imgRef: any = useRef<HTMLElement>()
+  const imgOnScreen: boolean = useOnScreen(imgRef)
+
+  const slideUp = useSpring({
+    y: contentOnScreen ? 0 : 50,
+    opacity: contentOnScreen ? 1 : 0,
+    delay: 100,
+  })
+  const fade = useSpring({
+    opacity: imgOnScreen ? 1 : 0,
+    scale: contentOnScreen ? 1 : 0,
+    delay: 200,
+  })
   return (
     <SectionLayout
       id={'education'}
       sectionName={'Education'}
-      customStyle="pt-12"
-    >
-      <div className="flex flex-col md:flex-row gap-8">
+      customStyle="pt-12">
+      <div className="flex flex-col md:flex-row gap-8" ref={contentRef}>
         <a.a
           style={fade}
           href="https://www.kmutt.ac.th/"
           target={'_blank'}
           className="w-36 self-center md:self-start"
-        >
+          ref={imgRef}>
           <img
             src={kmutt}
             alt="Kmutt logo"

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import SectionLayout from '../layouts/SectionLayout'
 import {
   webDevTools,
@@ -7,19 +7,54 @@ import {
   otherTools,
   testingTools,
 } from '../data/skills'
-import {a} from '@react-spring/web'
-import useFadeTransition from '../hooks/useFadeTransition'
+import { a, useTransition } from '@react-spring/web'
+import useOnScreen from '../hooks/useOnScreen'
 
 const Skill = () => {
-  const webDevTransition = useFadeTransition({arr: webDevTools})
-  const testingToolsTransition = useFadeTransition({arr: testingTools})
-  const styleToolsTransition = useFadeTransition({arr: styleTools})
-  const databaseToolsTransition = useFadeTransition({arr: databaseTools})
-  const otherToolsTransition = useFadeTransition({arr: otherTools})
+  const skillRef: any = useRef<HTMLElement>()
+  const skillOnScreen: boolean = useOnScreen(skillRef)
+
+  const webDevTransition = useTransition(skillOnScreen ? webDevTools : [], {
+    from: { opacity: 0, scale: 0 },
+    enter: { opacity: 1, scale: 1 },
+    leave: { opacity: 0, scale: 0 },
+    trail: 100,
+  })
+
+  const testingToolsTransition = useTransition(
+    skillOnScreen ? testingTools : [],
+    {
+      from: { opacity: 0, scale: 0 },
+      enter: { opacity: 1, scale: 1 },
+      leave: { opacity: 0, scale: 0 },
+      trail: 100,
+    }
+  )
+  const styleToolsTransition = useTransition(skillOnScreen ? styleTools : [], {
+    from: { opacity: 0, scale: 0 },
+    enter: { opacity: 1, scale: 1 },
+    leave: { opacity: 0, scale: 0 },
+    trail: 100,
+  })
+  const databaseToolsTransition = useTransition(
+    skillOnScreen ? databaseTools : [],
+    {
+      from: { opacity: 0, scale: 0 },
+      enter: { opacity: 1, scale: 1 },
+      leave: { opacity: 0, scale: 0 },
+      trail: 100,
+    }
+  )
+  const otherToolsTransition = useTransition(skillOnScreen ? otherTools : [], {
+    from: { opacity: 0, scale: 0 },
+    enter: { opacity: 1, scale: 1 },
+    leave: { opacity: 0, scale: 0 },
+    trail: 100,
+  })
 
   return (
     <SectionLayout id={'stack'} sectionName={'My Stack'}>
-      <div className="flex flex-wrap gap-8">
+      <div ref={skillRef} className="flex flex-wrap gap-8">
         <div id="dev-list" className="flex flex-col gap-2">
           <header className="font-semibold text-xl pb-4">Development</header>
           <div className="flex flex-wrap gap-8">

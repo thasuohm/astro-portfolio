@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import gmail from '/images/gmail.png'
 import github from '/images/github.png'
-import tel from '/images/tel.jpg'
 import profileImage from '/images/profile.jpg'
-import { a } from '@react-spring/web'
-import useBooping from '../hooks/useBooping'
-import useSlide from '../hooks/useSlide'
+import { a, useSpring } from '@react-spring/web'
+import useOnScreen from '../hooks/useOnScreen'
 
 const AboutMe = () => {
-  const slideRight = useSlide({ fromX: 120, toX: 0 })
+  const aboutMeRef: any = useRef<HTMLElement>()
+  const aboutMeOnScreen: boolean = useOnScreen(aboutMeRef)
+  const slideLeft = useSpring({
+    x: aboutMeOnScreen ? 0 : -50,
+    opacity: aboutMeOnScreen ? 1 : 0,
+  })
 
-  const booping = useBooping({})
+  const fade = useSpring({
+    opacity: aboutMeOnScreen ? 1 : 0,
+  })
 
   return (
     <header
@@ -20,7 +25,8 @@ const AboutMe = () => {
         id="introduce"
         className="max-w-4xl w-full flex flex-col gap-4 sm:flex-row justify-between mx-auto">
         <a.div
-          style={slideRight}
+          ref={aboutMeRef}
+          style={slideLeft}
           className="flex flex-col gap-2 text-2xl md:text-4xl font-extrabold md:w-1/2">
           <div className="flex flex-col xs:flex-row items-start xs:items-end gap-3">
             Hi, I Am
@@ -60,7 +66,7 @@ const AboutMe = () => {
           </div>
         </a.div>
         <a.div
-          style={booping}
+          style={fade}
           id="my-image-container"
           className="w-full sm:w-1/2 flex justify-center">
           <img
