@@ -40,7 +40,7 @@ const Contact = () => {
               </span>
               <a
                 href={item.link}
-                className="font-semibold"
+                className="font-semibold break-all"
                 target="_blank"
                 rel="noopener">
                 {item.label}

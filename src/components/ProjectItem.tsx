@@ -21,10 +21,8 @@ const ProjectItem = ({ project, idx }: { project: project; idx: number }) => {
     <div className={`text-slate-200 flex flex-col gap-2`} id={project.id}>
       <header
         ref={titleRef}
-        className={`text-xl sm:text-2xl font-semibold flex items-baseline gap-2 duration-700 ${
-          titleOnScreen
-            ? 'opacity-1 translate-x-0'
-            : 'opacity-0 -translate-x-6'
+        className={`text-xl sm:text-2xl font-bold flex items-baseline gap-2 text-slate-200 duration-700 ${
+          titleOnScreen ? 'opacity-1 translate-x-0' : 'opacity-0 -translate-x-6'
         }`}>
         {idx + 1}. {project.title}{' '}
         {project.tag && (

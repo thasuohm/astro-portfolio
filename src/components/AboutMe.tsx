@@ -20,7 +20,7 @@ const AboutMe = () => {
   return (
     <header
       id="aboutme"
-      className="flex from-orange-300 bg-gradient-to-r px-2 pb-8 pt-24">
+      className="flex from-orange-500 to-orange-100 bg-gradient-to-r px-2 pb-8 pt-24">
       <div
         id="introduce"
         className="max-w-4xl w-full flex flex-col gap-4 sm:flex-row justify-between mx-auto">
