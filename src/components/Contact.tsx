@@ -17,10 +17,11 @@ const Contact = () => {
 
   return (
     <SectionLayout
-      id={'contact'}
+      id={'contact-list'}
       sectionName={'Contact Me'}
       customStyle="bg-black text-white pt-12">
       <div
+        id="contact"
         ref={contactRef}
         className="flex flex-row flex-wrap gap-12 sm:justify-center items-start sm:items-center mt-4 text-slate-300">
         {contactTransition((props, item) => (

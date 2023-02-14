@@ -1,19 +1,32 @@
 import { useSpring, a } from '@react-spring/web'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { menuList } from '../data/menu'
 import { projects } from '../data/projects'
+import { useOutsideAlerter } from '../hooks/useOutsideAlert'
 
 const SideMenu = () => {
   const [isShowMenu, setIsShowMenu] = useState(false)
+  const menuRef: any = useRef<HTMLDivElement>()
 
   const slideLeftMenu = useSpring({
     x: isShowMenu ? 0 : -600,
     opacity: isShowMenu ? 1 : 0,
   })
 
+  const outsideMenuClicked = () => {
+    if (isShowMenu) {
+      setIsShowMenu(false)
+    }
+  }
+
+  useOutsideAlerter(menuRef, outsideMenuClicked, 'mousedown')
+
   return (
     <>
-      <a.div style={slideLeftMenu} className={`flex items-start fixed z-10`}>
+      <a.div
+        ref={menuRef}
+        style={slideLeftMenu}
+        className={`flex items-start fixed z-10`}>
         <nav className="bg-slate-100 drop-shadow-md shadow-slate-600 h-screen duration-200 w-60 z-10 md:relative  flex flex-col  p-4 overflow-y-auto">
           {menuList.map((item) => (
             <a
